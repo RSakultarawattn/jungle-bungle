@@ -1,0 +1,36 @@
+
+
+
+body {
+
+    
+
+    background-color: green;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+
+header {
+
+    color: blue;
+    font-size: 200px;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+
+
+
+.nar {
+
+        font-size: 20px;
+        margin-top: 5%;
+        font-family: cursive;
+        font-weight: bold;
+    
+    }
