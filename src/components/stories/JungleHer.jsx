@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ChoiceForm from '../../forms/ChoiceForm';
 
 const JungleHer = ({ name, tool, adjective, animal, image }) => (
-  <figure>
+  <dl>
     <img src={image} />
     {name} woke to find herself in a close, {adjective}, warm environment.  
      The many sounds surrounding her somehow seemed familiar, though 
@@ -25,8 +26,8 @@ const JungleHer = ({ name, tool, adjective, animal, image }) => (
     astonished when she noticed it was being
     guarded by a large {animal}! 
        
-
-  </figure>
+    <ChoiceForm />
+  </dl>
 );
 
 JungleHer.propTypes = {

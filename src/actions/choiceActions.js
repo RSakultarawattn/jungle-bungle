@@ -1,6 +1,6 @@
-export const GET_STORY = 'GET_STORY';
-export const getStory = story => ({
-  type: GET_STORY, 
+export const CREATE_STORY = 'CREATE_STORY';
+export const createStory = story => ({
+  type: CREATE_STORY, 
   payload: story
 });
 

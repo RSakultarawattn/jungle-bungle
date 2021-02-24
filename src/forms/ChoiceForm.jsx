@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { JungleHer } from '../components/stories/JungleHer';
-import { JungleHim } from '../components/stories/JungleHim';
-import { JungleThey } from '../components/stories/JungleThey';
-import { getStory } from '../actions/choiceActions';
+
+import { createStory } from '../actions/choiceActions';
 
 const ChoiceForm = () => {
   const dispatch = useDispatch();
@@ -18,7 +16,7 @@ const ChoiceForm = () => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    dispatch(getStory({ name, tool, adjective, animal }));
+    dispatch(createStory({ name, tool, adjective, animal }));
 
   };
   return (
