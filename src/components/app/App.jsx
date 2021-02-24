@@ -1,5 +1,14 @@
 import React from 'react';
+import ChoiceForm from '../../forms/ChoiceForm';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  (
+    
+    <>
+      <h1>Jungle Bungle</h1>
+      <ChoiceForm />
+      
+      
+    </>
+  );
 }
