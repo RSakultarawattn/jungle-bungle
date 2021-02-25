@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const JungleHim = ({ name, tool, adjective, animal, image }) => (
+const JungleHim = ({ name, tool, adjective, animal }) => (
   <figure>
-    <img src={image} />
+    
     {name} woke to find himself in a close, {adjective}, warm environment.  
      The many sounds surrounding him somehow seemed familiar, though 
     from where he could not recall.  He lay there for some time with
@@ -33,8 +33,7 @@ JungleHim.propTypes = {
   name: PropTypes.string.isRequired,
   tool: PropTypes.string.isRequired,
   adjective: PropTypes.string.isRequired,
-  animal: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired
+  animal: PropTypes.string.isRequired
 
 };
 

@@ -1,22 +1,20 @@
 import { CREATE_STORY } from '../actions/choiceActions';
-import JungleHer  from '../components/stories/JungleHer';
-import  JungleHim  from '../components/stories/JungleHim';
-import  JungleThey  from '../components/stories/JungleThey';
 
 
 export const initialState = {
-  story: {}
+  name: '',
+  tool: '',
+  adjective: '',
+  animal: ''
 };
 
 const reducer = (state = initialState, action) => {
   switch(action.type) {
     case CREATE_STORY: {
-      const story = { ...state.story };
-      story[JungleHer, JungleHim, JungleThey] = action.payload;
-
+     
       return {
         ...state, 
-        story
+        ...action.payload
       };
     }
     default:
@@ -25,3 +23,7 @@ const reducer = (state = initialState, action) => {
 };
 
 export default reducer;
+
+
+
+

@@ -1,10 +1,22 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import ChoiceForm from '../../forms/ChoiceForm';
+import { createStory } from '../../actions/choiceActions';
 
-const JungleThey = ({ name, tool, adjective, animal, image }) => (
-  <figure>
-    <img src={image} />
-    {name} woke to find themselves in a close, {adjective}, warm environment.  
+const JungleThey = ({ name, tool, adjective, animal }) => {
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch({ createStory });
+  
+  };
+  return (
+  
+    <figure>
+      <dt>THE JUNGLE BUNGLE</dt>
+      {name} woke to find themselves 
+      in a close, {adjective}, warm environment.  
      The many sounds surrounding them somehow seemed familiar, though 
     from where they could not recall.  They lay there for some time with
      their eyes closed in an attempt to mentally orient themselves to their new 
@@ -24,18 +36,19 @@ const JungleThey = ({ name, tool, adjective, animal, image }) => (
     a {tool} leaning against a nearby tree, but was even more 
     astonished when they noticed it was being
     guarded by a large {animal}!
-       
 
-  </figure>
-);
+      <button onClick={handleClick}>Go!</button>
+      <ChoiceForm/>
 
+    </figure>
+  );
+};
 JungleThey.propTypes = {
   name: PropTypes.string.isRequired,
   tool: PropTypes.string.isRequired,
   adjective: PropTypes.string.isRequired,
-  animal: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired
-
+  animal: PropTypes.string.isRequired
+  
 };
 
 export default JungleThey;

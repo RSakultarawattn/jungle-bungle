@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-
 import { createStory } from '../actions/choiceActions';
+
+// import { createNameChoice, createAnimalChoice, 
+//   createToolChoice, createAdjectiveChoice } from '../actions/choiceActions';
 
 
 const ChoiceForm = () => {
@@ -17,7 +19,7 @@ const ChoiceForm = () => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    dispatch(createStory({ name, tool, adjective, animal }));
+    dispatch(createStory ({ name, tool, adjective, animal }));
 
   };
   return (
@@ -46,7 +48,7 @@ const ChoiceForm = () => {
         value={animal}
         onChange={({ target }) => setAnimal(target.value)}
       />
-      <button onClick={handleSubmit}>Pull the trigger!</button>
+      <button>Gitcher Story!</button>
       
     </form>
   );

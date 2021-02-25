@@ -1,27 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import JungleHer from './JungleHer';
+import { useSelector } from 'react-redux';
+import { getAllState } from '../../selectors/storySelectors';
 
-export default function JungleHerList({ jungleHer }) {
-  return (
-    <ul>
-      {
-        jungleHer.map((jungleHer) => {
-          return (
-            <li>
-              <JungleHer {...jungleHer}/>
-            </li>
-          );
-        })
-      }
-    </ul>
-  );
-}
+const JungleHerList = () => { 
+  const storyElement = useSelector(getAllState);
+
   
-JungleHerList.propTypes = {
-  jungleHer: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired
+   
+  return (
+    <div>
+      <JungleHer {...storyElement}/>
+    </div>
+  );
 };
-
+ 
+export default JungleHerList;
+  
 
   
