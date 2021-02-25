@@ -1,20 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
 import ChoiceForm from '../../forms/ChoiceForm';
-// import { createNameChoice, createToolChoice, createAdjectiveChoice, 
-//   createAnimalChoice } from '../../actions/choiceActions';
-import { createStory } from '../../actions/choiceActions';
 
 
 const JungleHer = ({  name, tool, adjective, animal }) => {
-  const dispatch = useDispatch();
   
-  const handleClick = () => {
-    dispatch(createStory({  name, tool, adjective, animal }));
-    
-
-  };
 
 
  
