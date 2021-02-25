@@ -5,6 +5,7 @@ import ChoiceForm from '../../forms/ChoiceForm';
 const JungleHer = ({ name, tool, adjective, animal, image }) => (
   <dl>
     <img src={image} />
+    <dt>The Jungle Bungle</dt>
     {name} woke to find herself in a close, {adjective}, warm environment.  
      The many sounds surrounding her somehow seemed familiar, though 
     from where she could not recall.  She lied there for some time with
@@ -25,6 +26,7 @@ const JungleHer = ({ name, tool, adjective, animal, image }) => (
     a {tool} leaning against a nearby tree, but was even more 
     astonished when she noticed it was being
     guarded by a large {animal}! 
+
        
     <ChoiceForm />
   </dl>
@@ -39,4 +41,4 @@ JungleHer.propTypes = {
 
 };
 
-export default JungleHim;
+export default JungleHer;

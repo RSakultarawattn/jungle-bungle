@@ -45,6 +45,7 @@ const ChoiceForm = () => {
         value={animal}
         onChange={({ target }) => setAnimal(target.value)}
       />
+      <button>Pull the trigger!</button>
     </form>
   );
 };
