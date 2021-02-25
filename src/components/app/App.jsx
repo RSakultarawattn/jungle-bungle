@@ -3,7 +3,7 @@ import ChoiceForm from '../../forms/ChoiceForm';
 import './App.css';
 
 export default function App() {
- return (
+  return (
     
     <>
       <h1>Jungle Bungle</h1>

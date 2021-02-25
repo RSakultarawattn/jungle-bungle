@@ -5,7 +5,7 @@ import  JungleThey  from '../components/stories/JungleThey';
 
 
 export const initialState = {
-  story: []
+  story: {}
 };
 
 const reducer = (state = initialState, action) => {
