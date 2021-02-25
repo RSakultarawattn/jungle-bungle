@@ -1,12 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import ChoiceForm from '../../forms/ChoiceForm';
+// import { createNameChoice, createToolChoice, createAdjectiveChoice, 
+//   createAnimalChoice } from '../../actions/choiceActions';
+import { createStory } from '../../actions/choiceActions';
 
-const JungleHer = ({ name, tool, adjective, animal, image }) => (
-  <dl>
-    <img src={image} />
-    <dt>The Jungle Bungle</dt>
-    {name} woke to find herself in a close, {adjective}, warm environment.  
+
+const JungleHer = ({  name, tool, adjective, animal }) => {
+  const dispatch = useDispatch();
+  
+  const handleClick = () => {
+    dispatch(createStory({  name, tool, adjective, animal }));
+    
+
+  };
+
+
+ 
+  return (
+
+    <>
+      <dl>
+    
+        <dt>The Jungle Bungle</dt>
+        {name} woke to find herself in a close, 
+        {adjective}, warm environment.  
      The many sounds surrounding her somehow seemed familiar, though 
     from where she could not recall.  She lied there for some time with
      her eyes closed in an attempt to mentally orient herself to her new 
@@ -28,16 +47,21 @@ const JungleHer = ({ name, tool, adjective, animal, image }) => (
     guarded by a large {animal}! 
 
        
-    <ChoiceForm />
-  </dl>
-);
+
+        <ChoiceForm/>
+
+    
+      </dl>
+    </>
+  );
+};
 
 JungleHer.propTypes = {
   name: PropTypes.string.isRequired,
   tool: PropTypes.string.isRequired,
   adjective: PropTypes.string.isRequired,
-  animal: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired
+  animal: PropTypes.string.isRequired
+  
 
 };
 
