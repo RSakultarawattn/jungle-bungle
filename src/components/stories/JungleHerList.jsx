@@ -6,22 +6,22 @@ export default function JungleHerList({ jungleHer }) {
   return (
     <ul>
       {
-        jungleHer.map((jungleHer, i) => {
+        jungleHer.map((jungleHer) => {
           return (
-            <li key={i}>
+            <li>
               <JungleHer {...jungleHer}/>
             </li>
           );
         })
       }
     </ul>
-  );f
+  );
 }
   
 JungleHerList.propTypes = {
-  jungleHer: PropTypes.arrayOf(PropTypes.shape({
-    body: PropTypes.string.isRequired
-  }))
+  jungleHer: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired
 };
+
 
   

@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import { createStory } from '../actions/choiceActions';
 
+
 const ChoiceForm = () => {
   const dispatch = useDispatch();
 
@@ -45,6 +46,8 @@ const ChoiceForm = () => {
         value={animal}
         onChange={({ target }) => setAnimal(target.value)}
       />
+      <button onClick={handleSubmit}>Pull the trigger!</button>
+      
     </form>
   );
 };

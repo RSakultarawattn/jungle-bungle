@@ -1,7 +1,7 @@
 import { CREATE_STORY } from '../actions/choiceActions';
-import { JungleHer } from '../components/stories/JungleHer';
-import { JungleHim } from '../components/stories/JungleHim';
-import { JungleThey } from '../components/stories/JungleThey';
+import JungleHer  from '../components/stories/JungleHer';
+import  JungleHim  from '../components/stories/JungleHim';
+import  JungleThey  from '../components/stories/JungleThey';
 
 
 export const initialState = {
