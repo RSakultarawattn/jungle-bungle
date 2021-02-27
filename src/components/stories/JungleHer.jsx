@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ChoiceForm from '../../forms/ChoiceForm';
+
 
 
 const JungleHer = ({  name, tool, adjective, animal }) => {
@@ -11,7 +11,8 @@ const JungleHer = ({  name, tool, adjective, animal }) => {
   return (
 
     <>
-      <dl>
+    
+      <figure>
     
         <dt>The Jungle Bungle</dt>
         {name} woke to find herself in a close, 
@@ -38,11 +39,12 @@ const JungleHer = ({  name, tool, adjective, animal }) => {
 
        
 
-        <ChoiceForm/>
+       
 
     
-      </dl>
+      </figure>
     </>
+    
   );
 };
 
