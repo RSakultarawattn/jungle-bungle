@@ -1,26 +1,31 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createStory } from '../actions/choiceActions';
+import { Link } from 'react-router-dom';
+import JungleHerList from '../components/stories/JungleHerList';
+import { useHistory } from 'react-router-dom';
+
+//import JungleHer from '../components/stories/JungleHer';
 
 // import { createNameChoice, createAnimalChoice, 
 //   createToolChoice, createAdjectiveChoice } from '../actions/choiceActions';
 
 
-const ChoiceForm = () => {
+const JungleChoiceForm = () => {
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
   const [tool, setTool] = useState('');
   const [adjective, setAdjective] = useState('');
   const [animal, setAnimal] = useState('');
-
+  const history = useHistory();
 
 
   const handleSubmit = event => {
     event.preventDefault();
 
     dispatch(createStory ({ name, tool, adjective, animal }));
-
+    history.push('/JungleHerList');
   };
   return (
     <form onSubmit={handleSubmit}>
@@ -48,10 +53,10 @@ const ChoiceForm = () => {
         value={animal}
         onChange={({ target }) => setAnimal(target.value)}
       />
-      <button>Gitcher Story!</button>
+      <button>Go read your story!</button>
       
     </form>
   );
 };
 
-export default ChoiceForm;
+export default JungleChoiceForm;

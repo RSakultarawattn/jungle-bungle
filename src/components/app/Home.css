@@ -1,5 +1,32 @@
+.intro {
 
-/* body {
+    
+    font-size: 6.2em;
+    font-family: papyrus;
+    font-weight: bolder;
+    color: red;
+    text-shadow: 3px 3px black;
+    background-color: black;
+    border-radius: 5%;
+    opacity: .8;
+    margin-top: 0%;
+
+}
+
+.advent {
+font-size: 4em;
+font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+color: red;
+text-shadow: 3px 1px black;
+background-color: yellow;
+border-radius: 50%;
+opacity: .9;
+margin-top: -7.5%;
+}
+
+
+body {
 
     
 
@@ -34,18 +61,18 @@ button {
     border-radius: 50%;
     text-shadow: 2px 2px black;
 }
- */
 
 
 
 
 
-/* .nar {
+
+
+.nar {
 
         font-size: 20px;
         margin-top: 5%;
         font-family: cursive;
         font-weight: bold;
     
-    } */
-
+    }

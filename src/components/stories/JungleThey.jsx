@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import ChoiceForm from '../../forms/ChoiceForm';
+import JungleChoiceForm from '../../forms/JungleChoiceForm';
 import { createStory } from '../../actions/choiceActions';
 
 const JungleThey = ({ name, tool, adjective, animal }) => {
@@ -38,7 +38,7 @@ const JungleThey = ({ name, tool, adjective, animal }) => {
     guarded by a large {animal}!
 
       <button onClick={handleClick}>Go!</button>
-      <ChoiceForm/>
+      <JungleChoiceForm/>
 
     </figure>
   );
